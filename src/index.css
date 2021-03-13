@@ -1,13 +1,103 @@
 body {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  color: white;
+  font-size: 6rem;
+}
+
+h2 {
+  color: white;
+  font-size: 5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+#hero {
+  width: 100vw;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bounding {
+  overflow: hidden;
+}
+.full-image {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#top-box {
+  display: flex;
+  width: 100%;
+}
+
+#logo-box {
+  width: 45vw;
+  height: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#white-logo {
+  width: 25vw;
+  height: auto;
+}
+
+.button {
+  width: 172px;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: 525px;
+}
+
+.grid-image {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.grid-wid {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#footer-background {
+  width: 100vw;
+  height: 152px;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+}
+
+#follow-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#social-logos {
+  width: 152px;
+  height: auto;
 }
