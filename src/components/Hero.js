@@ -4,7 +4,7 @@ const Hero = () => {
     <div id="welcome-box">
       <p id="welcome-text">WELCOME TO</p>
       <p id="hero-text">Rooster Grin</p>
-      <div id="hero-button">BUTTON BUTTON</div>
+      <div id="purple-button">BUTTON BUTTON</div>
     </div>
   </div>
 }
