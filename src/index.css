@@ -50,6 +50,16 @@ a {
   min-height: 100%;
 }
 
+#hero-fade {
+  animation: fadein 5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 .hero-content {
   position: absolute;
   width: 100%;
@@ -69,6 +79,15 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.turn-white {
+  animation: blacktowhite 3s;
+}
+
+@keyframes blacktowhite {
+  from { color: black; }
+  to {color: white; }
 }
 
 #welcome-box {
@@ -159,9 +178,15 @@ a {
 .subject-box {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
+  justify-content: space-between;
   align-items: center;
-  width: 200px;
+  width: 165px;
+  height: 165px;
+  margin-right: 40px;
+}
+
+.subject-box:hover {
+  background-color: rgba(97, 52, 118, .03)
 }
 
 .icons {
@@ -169,6 +194,10 @@ a {
   height: auto;
   margin: 20px;
 }
+
+/* .icons:hover {
+  width: 110px;
+} */
 
 #ratings-box {
   display: flex;
