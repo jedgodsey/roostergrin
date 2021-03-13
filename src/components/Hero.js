@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div id="hero" className="bounding">
       <img src={hero} className="full-image" />
-      <div className="content">
+      <div className="hero-content">
         <div id="top-box">
           <div id="logo-box"><img src={whitelogo} id="white-logo" /></div>
         </div>

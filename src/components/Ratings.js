@@ -1,15 +1,18 @@
+import stars from '../assets/stars.png';
+
 const Ratings = () => {
   return (
     <div id="ratings-box">
       <div id="exclamation-box">
         <h3>LOREM IPSUM DOLOR SIT AMET</h3>
-        <div id="stars">
+        <img src={stars} id="stars" />
+        {/* <div id="stars">
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
-        </div>
+        </div> */}
       </div>
       <div id="carousel-box">
         <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
@@ -20,13 +23,22 @@ const Ratings = () => {
           </ol>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img className="d-block w-100" src="..." alt="First slide" />
+              <div className="slide">
+                <h6>John Doe 08/08/2019</h6>
+                <p>Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula. Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula.Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in.</p>
+              </div>
             </div>
             <div className="carousel-item">
-              <img className="d-block w-100" src="..." alt="Second slide" />
+              <div className="slide">
+                <h6>John Doe 08/08/2019</h6>
+                <p>Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula. Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula.Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in.</p>
+              </div>
             </div>
             <div className="carousel-item">
-              <img className="d-block w-100" src="..." alt="Third slide" />
+              <div className="slide">
+                <h6>John Doe 08/08/2019</h6>
+                <p>Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula. Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula.Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in.</p>
+              </div>
             </div>
           </div>
           <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
