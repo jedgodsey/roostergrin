@@ -8,19 +8,21 @@ body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
+
 h1 {
   color: white;
-  font-size: 6rem;
+  /* font-size: 6rem; */
+  font-size: min(6rem, 12vw);
 }
 
 h2 {
   color: white;
-  font-size: 5rem;
+  font-size: min(5rem, 10vw);
 }
 
 h3 {
   color: rgb(97, 52, 118);
-  font-size: 2.5rem;
+  font-size: min(2.5rem, 6vw);
 }
 
 h6 {
@@ -111,6 +113,13 @@ a {
   grid-template-rows: 525px 600px 600px 600px;
 }
 
+@media only screen and (max-width: 1000px) {
+  #grid-container {
+    grid-template-columns: auto;
+    grid-template-rows: 525px 525px 600px 600px 600px 600px;
+  }
+}
+
 .lorem-cell {
   display: flex;
   justify-content: center;
@@ -131,9 +140,23 @@ a {
   grid-column-end: 3;
 }
 
+@media only screen and (max-width: 1000px) {
+  .grid-image {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
 .grid-wide {
   grid-column-start: 1;
   grid-column-end: 3;
+}
+
+@media only screen and (max-width: 1000px) {
+  .grid-wide {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 }
 
 .content {
@@ -194,10 +217,6 @@ a {
   height: auto;
   margin: 20px;
 }
-
-/* .icons:hover {
-  width: 110px;
-} */
 
 #ratings-box {
   display: flex;
