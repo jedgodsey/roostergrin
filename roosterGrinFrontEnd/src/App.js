@@ -1,15 +1,16 @@
-import Hero from './components/Hero';
-import Grid from './components/Grid';
-import Ratings from './components/Ratings';
-import Footer from './components/Footer';
+import { Route, Switch } from 'react-router-dom';
+import Login from './pages/Login'
+import Utility from './pages/Utility'
+import Main from './pages/Main'
 
 function App() {
   return (
     <>
-      <Hero />
-      <Grid />
-      <Ratings />
-      <Footer />
+      <Switch>
+        <Route path='/login' component={Login} />
+        <Route path='/utility' component={Utility} />
+        <Route path='/' component={Main} />
+      </Switch>
     </>
   );
 }
