@@ -8,7 +8,9 @@ const Hero = () => {
       <img src={hero} className="full-image" id="hero-fade" />
       <div className="hero-content">
         <div id="top-box">
-          <div id="logo-box"><img src={whitelogo} id="white-logo" /></div>
+          <div id="logo-box">
+            <img src={whitelogo} id="white-logo" />
+          </div>
         </div>
         <div id="welcome-box">
           <h1 id="welcome-text" className="turn-white">WELCOME TO</h1>

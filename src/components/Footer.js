@@ -6,7 +6,9 @@ const Footer = () => {
       <div id="follow-box">
         <p>Follow Us:</p>
         <div id="follow-links">
-          <img src={socials} id="social-logos"/>
+          <a href="">
+            <img src={socials} id="social-logos"/>
+          </a>
         </div>
       </div>
     </div>
