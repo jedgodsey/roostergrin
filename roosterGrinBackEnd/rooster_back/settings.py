@@ -120,4 +120,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = 'https://main.d2rr0g4gs0wgxn.amplifyapp.com/'
+LOGIN_REDIRECT_URL = 'https://main.d2rr0g4gs0wgxn.amplifyapp.com/utility'
