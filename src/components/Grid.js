@@ -21,10 +21,10 @@ const Grid = () => {
         </div>
       </div>
       <div className="grid-image bounding">
-        <img src={help} className="full-image" />
+        <img src={help} className="full-image" id="help" />
       </div>
-      <div className="grid-wide bounding" id="laptop">
-        <img src={laptop} className="full-image" />
+      <div className="grid-wide bounding">
+        <img src={laptop} className="full-image" id="laptop" />
         <div className="content">
           <div className="button-box">
             <h3>LOREM IPSUM</h3>
@@ -77,7 +77,7 @@ const Grid = () => {
         </div>
       </div>
       <div className="grid-wide bounding" id="girl">
-        <img src={girl} className="full-image" />
+        <img src={girl} className="full-image" id="girl" />
         <div className="content">
           <div className="offset-box"></div>
           <div className="button-box">

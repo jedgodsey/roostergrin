@@ -5,8 +5,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  /* max-width: 100vw;
-  overflow-x: hidden; */
+  max-width: 100vw;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
@@ -72,6 +71,18 @@ a:visited {
   min-width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 750px) and (orientation: portrait) {
+  #help {
+    margin-left: -50%;
+  }
+  #laptop {
+    margin-left: -160%;
+  }
+  #girl {
+    margin-left: -10%;
+  }
 }
 
 #hero-fade {
