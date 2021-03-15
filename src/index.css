@@ -8,21 +8,25 @@ body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
-
 h1 {
   color: white;
-  /* font-size: 6rem; */
   font-size: min(6rem, 12vw);
+  font-family: hwt-republic-gothic-outline,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h2 {
   color: white;
   font-size: min(5rem, 10vw);
+  font-family: hwt-republic-gothic-solid,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h3 {
   color: rgb(97, 52, 118);
-  font-size: min(2.5rem, 6vw);
+  font-size: min(2.5rem, 7vw);
 }
 
 h6 {
@@ -42,6 +46,12 @@ a {
   align-items: center;
 }
 
+@media only screen and (max-width: 1000px) {
+  #hero {
+    height: 100vh;
+  }
+}
+
 .bounding {
   overflow: hidden;
   position: relative;
@@ -49,8 +59,15 @@ a {
 
 .full-image {
   min-width: 100%;
-  min-height: 100%;
+  height: 100%;
+  /* object-fit: cover; */
 }
+
+/* @media only screen and (max-width: 1000px) {
+  .full-image {
+    transform: scaleX(-1);
+  }
+} */
 
 #hero-fade {
   animation: fadein 5s;
@@ -73,6 +90,7 @@ a {
 #top-box {
   display: flex;
   width: 100%;
+  height: 30%;
 }
 
 #logo-box {
@@ -96,6 +114,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  height: 40%;
 }
 
 #white-logo {
@@ -127,7 +147,8 @@ a {
 }
 .lorem {
   width: 50%;
-  margin-left: 30%;
+  margin-left: 10vw;
+  max-width: 75vw;
 }
 
 .purple-lorem {
@@ -172,10 +193,17 @@ a {
 
 .button-box {
   width: 20vw;
+  min-width: 180px;
 }
 
 .offset-box {
   width: 40%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .offset-box {
+    width: 0%;
+  }
 }
 
 #icons {
@@ -192,6 +220,12 @@ a {
   margin-right: 100px;
 }
 
+@media only screen and (max-width: 1000px) {
+  #icons-box {
+    margin-right: 0%;
+  }
+}
+
 .icon-row {
   display: flex;
   justify-content: center;
@@ -205,7 +239,14 @@ a {
   align-items: center;
   width: 165px;
   height: 165px;
-  margin-right: 40px;
+  margin: 0 20px 0 20px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .subject-box {
+    margin: 0%;
+  }
 }
 
 .subject-box:hover {
@@ -220,42 +261,62 @@ a {
 
 #ratings-box {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 400px;
+  min-height: 400px;
+}
+
+@media only screen and (max-width: 1000px) {
+  #ratings-box {
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 550px;
+  }
 }
 
 #exclamation-box {
   width: 25vw;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #stars {
   width: 12vw;
+
+  min-width: 150px;
 }
 
 #carousel-box {
   width: 40vw;
+  min-width: 300px;
+}
+
+@media only screen and (max-width: 1000px) {
+  #carousel-box {
+    width: 100%
+  }
 }
 
 #carouselExampleIndicators {
   height: 300px;
-  width: 120%;
+  width: 100%;
 }
 
 .carousel-inner {
-  margin: 0 75px 0 300px;
+  width: 75%;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 100px;
   width: 100px;
-  /* outline: black; */
   background-size: 100%, 100%;
   border-radius: 50%;
-  /* border: 1px solid black; */
-  background-image: none;
+  /* background-image: none; */
 }
 
 .carousel-control-next-icon:after
@@ -269,6 +330,12 @@ a {
   content: '<';
   font-size: 35px;
   color: rgb(97, 52, 118);
+}
+
+@media only screen and (max-width: 1000px) {
+  .carousel-indicators {
+    bottom: -40px;
+  }
 }
 
 .carousel-indicators .active {
@@ -285,7 +352,8 @@ a {
 }
 
 .slide {
-  width: 35vw;
+  width: 100%;
+  /* min-width: 300px; */
   display: flex;
   flex-direction: column;
   align-items: center;
