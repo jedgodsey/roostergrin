@@ -1,11 +1,13 @@
 from django.shortcuts import render
+from .models import Content
 from django.http import HttpResponse
+import json
 
 def home(request):
     return HttpResponse('hitting it')
 
-def get_content(request):
-    content = Content.objects.get(location=request.location)
+def get_content(request, location):
+    content = Content.objects.get(location=location)
     found_content = {
         'id': content.id,
         'location': content.location,
