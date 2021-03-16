@@ -6,6 +6,7 @@ const Utility = () => {
   let [ item, setItem ] = useState('grid1')
   let [ title, setTitle ] = useState('')
   let [ text, setText ] = useState('')
+  let [ id, setId ] = useState(0)
 
   const itemChange = (value) => {
     setItem(value)
@@ -17,6 +18,7 @@ const Utility = () => {
       .then(info => {
         setTitle(info.title)
         setText(info.text)
+        setId(info.id)
       })
   }
 
@@ -24,7 +26,8 @@ const Utility = () => {
     let info = {
       location: item,
       title: title,
-      text: text
+      text: text,
+      id: id
     }
     ContentModel.update(info)
   }

@@ -18,16 +18,16 @@ def get_content(request, location):
     return HttpResponse(response, content_type='text/json')
 
 
-def update_content(request, location):
-    new_content = json.loads(request.body)
-    found_content = Content.objects.get(location=location)
-    new_content['id'] = found_content.id
-    print('new content: ', new_content)
+# def update_content(request, location):
+#     new_content = json.loads(request.body)
+#     found_content = Content.objects.get(location=location)
+#     new_content['id'] = found_content.id
+#     print('new content: ', new_content)
 
-    updated_content = Content(new_content)
-    print('updated content: ', updated_content)
+#     updated_content = Content(new_content)
+#     print('updated content: ', updated_content)
 
-    # new_content = Content(json.loads(request.body))
-    updated_content.save()
-    print('four')
-    return HttpResponse(updated_content, content_type='text/json')
+#     # new_content = Content(json.loads(request.body))
+#     updated_content.save()
+#     print('four')
+#     return HttpResponse(updated_content, content_type='text/json')
