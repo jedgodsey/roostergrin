@@ -1,6 +1,6 @@
 let url;
 if (process.env.NODE_ENV === 'production') {
-  url = `********* fill here ***********`;
+  url = `https://roosterback.herokuapp.com`;
 } else {
   url = 'http://localhost:8000';
 }

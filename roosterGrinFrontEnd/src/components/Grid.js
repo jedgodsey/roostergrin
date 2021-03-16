@@ -1,3 +1,4 @@
+import ContentModel from '../models/ContentModel';
 import orangebutton from '../assets/orange-button.png';
 import help from '../assets/help.jpg';
 import laptop from '../assets/laptop.jpg';
@@ -9,6 +10,12 @@ import calendar from '../assets/calendar.png';
 import clipboard from '../assets/clipboard.png';
 
 const Grid = () => {
+
+  const fill = (location, line) => {
+    ContentModel.getOne(location)
+      .then(info => info.line)
+  }
+  
   return (
     <div id="grid-container">
       <div className="lorem-cell">
