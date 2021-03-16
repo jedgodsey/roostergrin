@@ -20,17 +20,18 @@ class ContentModel {
   }
 
   static update(info) {
-    return fetch(`${url}/${info.location}/`, {
+    return fetch(`${url}/${info.location}/update/`, {
+      method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(info),
-      credentials: 'include'
+      // credentials: 'include'
     })
       .then(res => console.log('this is your res: ', res.json()))
       .catch(err => {
         console.log('error fetching data in MyndexModel.update: ', err)
         return {message: 'error in update'};
       })
-      .then(res => window.location.href = '/')
+      // .then(res => window.location.href = '/')
   }
 }
 
