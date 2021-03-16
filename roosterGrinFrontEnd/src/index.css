@@ -38,10 +38,17 @@ h6 {
 
 a {
   text-decoration: none;
+  color: inherit !important;
 }
 
 a:hover {
   text-decoration: none;
+  color: inherit !important;
+}
+
+a:active {
+  text-decoration: none;
+  color: inherit !important;
 }
 
 a:visited {
