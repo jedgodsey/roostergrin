@@ -133,4 +133,9 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'https://main.d2rr0g4gs0wgxn.amplifyapp.com/utility'
 
-django_on_heroku.settings(locals())
+django-on-heroku.settings(locals())
+
+
+#git subtree push --prefix output heroku master
+
+#git subtree push --prefix roosterGrinBackEnd heroku master
