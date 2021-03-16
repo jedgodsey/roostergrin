@@ -13,6 +13,8 @@ I got a few of these done, but not as many as I'd like.  Among my extras, I was 
 
 You can view the hosted version of this project at https://main.d2rr0g4gs0wgxn.amplifyapp.com/
 
+## Please be careful deleting/editing with the CMS as it is REAL!
+
 Due to interview commitments with other companies, I unfortunately wasn't able to start work on this project until this last weekend. This meant that a lot of things had to get left on the table. What I missed out on:
 
 • I created a functioning auth module, but ran out of time to get it plugged in.
