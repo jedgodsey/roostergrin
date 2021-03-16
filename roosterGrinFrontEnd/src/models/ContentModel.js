@@ -7,13 +7,16 @@ if (process.env.NODE_ENV === 'production') {
 
 class ContentModel {
 
-  static getOne(location) {
-    return fetch(`${url}/${location}/`, {credentials: 'include'})
+  static async getOne(location) {
+    let peep = await fetch(`${url}/${location}/`, {
+      // mode: 'no-cors',
+      // credentials: 'include'
+    })
       .then(res => res.json())
       .catch(err => {
         console.log('error fetching data in MyndexModel.getOne: ', err)
-        return {myndex: {}};
       })
+      return peep
   }
 
   static update(info) {
