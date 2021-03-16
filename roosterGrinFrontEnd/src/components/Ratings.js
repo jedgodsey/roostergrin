@@ -1,38 +1,51 @@
+import { useState, useEffect } from 'react';
+import ContentModel from '../models/ContentModel';
 import stars from '../assets/stars.png';
 
 const Ratings = () => {
+
+  let [slide1, setSlide1] = useState({id: 0, location: '', title: '', text: ''})
+  let [slide2, setSlide2] = useState({id: 0, location: '', title: '', text: ''})
+  let [slide3, setSlide3] = useState({id: 0, location: '', title: '', text: ''})
+
+  useEffect(() => {
+    fill('slide1', setSlide1)
+    fill('slide2', setSlide2)
+    fill('slide3', setSlide3)
+  }, [])
+
+  const fill = (location, func) => {
+    ContentModel.getOne(location)
+      .then(info => {
+        func(info)
+      })
+  }
+
   return (
     <div id="ratings-box">
       <div id="exclamation-box">
         <h3>LOREM IPSUM DOLOR SIT AMET</h3>
         <img src={stars} id="stars" />
-        {/* <div id="stars">
-          <i className="fas fa-star"></i>
-          <i className="fas fa-star"></i>
-          <i className="fas fa-star"></i>
-          <i className="fas fa-star"></i>
-          <i className="fas fa-star"></i>
-        </div> */}
       </div>
       <div id="carousel-box">
         <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
               <div className="slide">
-                <h6>John Doe 08/08/2019</h6>
-                <p>Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula. Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula.Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in.</p>
+                <h6>{slide1.title}</h6>
+                <p>{slide1.text}</p>
               </div>
             </div>
             <div className="carousel-item">
               <div className="slide">
-                <h6>John Doe 08/08/2019</h6>
-                <p>Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula. Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula.Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in.</p>
+                <h6>{slide2.title}</h6>
+                <p>{slide2.text}</p>
               </div>
             </div>
             <div className="carousel-item">
               <div className="slide">
-                <h6>John Doe 08/08/2019</h6>
-                <p>Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula. Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula.Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in.</p>
+                <h6>{slide3.title}</h6>
+                <p>{slide3.text}</p>
               </div>
             </div>
           </div>

@@ -416,3 +416,46 @@ a:visited {
   width: 152px;
   height: auto;
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+#header-hero {
+  min-width: 100%;
+  position: relative;
+}
+
+#header-logo {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  max-width: 400px;
+  height: auto;
+}
+
+form {
+  width: 50%;
+}
+
+#submit {
+  max-width: 300px;
+}
+
+.box1 {
+  max-height: 50px;
+}
+
+.box2 {
+  min-height: 300px;
+}

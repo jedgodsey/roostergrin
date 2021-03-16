@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import ContentModel from '../models/ContentModel';
+import Footer from '../components/Footer';
+import hero from '../assets/hero.jpg';
+import whitelogo from '../assets/logo-white.svg';
 import orangebutton from '../assets/orange-button.png';
 
 const Utility = () => {
@@ -33,7 +36,11 @@ const Utility = () => {
   }
 
   return(
-    <>
+    <section>
+      <header>
+        <img src={hero} id="header-hero" />
+        <img src={whitelogo} id="header-logo" />
+      </header>
       <form>
         <div className="form-group">
           <label for="exampleFormControlSelect1">Page Item</label>
@@ -50,15 +57,16 @@ const Utility = () => {
         </div>
         <div className="form-group">
           <label for="exampleFormControlTextarea1">Title</label>
-          <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" value={title} onChange={(e) => setTitle(e.target.value)}></textarea>
+          <textarea className="form-control box1" id="exampleFormControlTextarea1" rows="3" value={title} onChange={(e) => setTitle(e.target.value)}></textarea>
         </div>
         <div className="form-group">
           <label for="exampleFormControlTextarea1">Content</label>
-          <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" value={text} onChange={(e) => setText(e.target.value)}></textarea>
+          <textarea className="form-control box2" id="exampleFormControlTextarea1" rows="3" value={text} onChange={(e) => setText(e.target.value)}></textarea>
         </div>
       </form>
-      <input type="image" src={orangebutton} alt="Submit Form" onClick={() => submit()} />
-    </>
+      <input type="image" src={orangebutton} alt="Submit Form" onClick={() => submit()} id="submit" />
+      <Footer />
+    </section>
   )
 }
 

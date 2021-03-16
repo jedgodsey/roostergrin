@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import ContentModel from '../models/ContentModel';
 import orangebutton from '../assets/orange-button.png';
 import help from '../assets/help.jpg';
@@ -10,19 +11,32 @@ import calendar from '../assets/calendar.png';
 import clipboard from '../assets/clipboard.png';
 
 const Grid = () => {
+  let [grid1, setGrid1] = useState({id: 0, location: '', title: '', text: ''})
+  let [grid2, setGrid2] = useState({id: 0, location: '', title: '', text: ''})
+  let [grid3, setGrid3] = useState({id: 0, location: '', title: '', text: ''})
+  let [grid4, setGrid4] = useState({id: 0, location: '', title: '', text: ''})
 
-  const fill = (location, line) => {
+  useEffect(() => {
+    fill('grid1', setGrid1)
+    fill('grid2', setGrid2)
+    fill('grid3', setGrid3)
+    fill('grid4', setGrid4)
+  }, [])
+
+  const fill = async (location, func) => {
     ContentModel.getOne(location)
-      .then(info => info.line)
+      .then(info => {
+        func(info)
+      })
   }
   
   return (
     <div id="grid-container">
       <div className="lorem-cell">
         <div className="lorem">
-          <h3>LOREM IPSUM</h3>
-          <p>Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula, lacus est vehicula donec. Quam in ac quam. Duis et, non arcu imperdiet sem tellus suspendisse. Condimentum non aliquet sed, quisque risus vitae semper duis feugiat .</p>
-          <a href="">
+          <h3>{grid1.title}</h3>
+          <p>{grid1.text}</p>
+          <a href="/utility">
             <img src={purplelorem} className="purple-lorem" />
           </a>
         </div>
@@ -34,8 +48,9 @@ const Grid = () => {
         <img src={laptop} className="full-image" id="laptop" />
         <div className="content">
           <div className="button-box">
-            <h3>LOREM IPSUM</h3>
-            <a href="">
+            <h3>{grid2.title}</h3>
+            <p>{grid2.text}</p>
+            <a href="/utility">
               <img src={orangebutton} className="button" />
             </a>
           </div>
@@ -44,9 +59,9 @@ const Grid = () => {
       </div>
       <div className="lorem-cell">
         <div className="lorem">
-          <h3>LOREM IPSUM DOLOR SIT AMET</h3>
-          <p>Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula.</p>
-          <a href="">
+          <h3>{grid3.title}</h3>
+          <p>{grid3.text}</p>
+          <a href="/utility">
             <img src={purplelorem} className="purple-lorem" />
           </a>
         </div>
@@ -54,13 +69,13 @@ const Grid = () => {
       <div id="icons">
         <div id="icons-box">
           <div className="icon-row">
-            <a href="">
+            <a href="/utility">
               <div className="subject-box">
                 <img src={clipboard} className="icons" />
                 <h5>LOREM</h5>
               </div>
             </a>
-            <a href="">
+            <a href="/utility">
               <div className="subject-box">
                 <img src={mask} className="icons" />
                 <h5>LOREM IPSUM</h5>
@@ -68,13 +83,13 @@ const Grid = () => {
             </a>
           </div>
           <div className="icon-row">
-            <a href="">
+            <a href="/utility">
               <div className="subject-box">
                 <img src={goggles} className="icons" />
                 <h5>LOREM IPSUM</h5>
               </div>
             </a>
-            <a href="">
+            <a href="/utility">
               <div className="subject-box">
                 <img src={calendar} className="icons" />
                 <h5>LOREM</h5>
@@ -88,9 +103,9 @@ const Grid = () => {
         <div className="content">
           <div className="offset-box"></div>
           <div className="button-box">
-            <h3>LOREM IPSUM</h3>
-            <p>Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam, ut pede ut ante, in viverra eros dictum nisl ligula.</p>
-            <a href="">
+            <h3>{grid4.title}</h3>
+            <p>{grid4.text}</p>
+            <a href="/utility">
               <img src={orangebutton} className="button" />
             </a>
           </div>

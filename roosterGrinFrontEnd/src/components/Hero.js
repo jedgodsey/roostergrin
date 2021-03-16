@@ -15,7 +15,7 @@ const Hero = () => {
         <div id="welcome-box">
           <h1 id="welcome-text" className="turn-white">WELCOME TO</h1>
           <h2 id="hero-text" className="turn-white">Rooster Grin</h2>
-          <a href="">
+          <a href="/utility">
             <img src={purplebutton} className="button" />
           </a>
         </div>
